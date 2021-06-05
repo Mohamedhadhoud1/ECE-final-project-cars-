@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="style">
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+            background-color: #333;
+        }
+        
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            top: 48px;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        
+        .video-container video {
+            /* Make video to at least 100% wide and tall */
+            min-width: 100%;
+            min-height: 100%;
+            /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+            width: auto;
+            height: auto;
+            /* Center the video */
+            position: absolute;
+            top: 48px;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            z-index: -1;
+        }
+        
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+            height: ;
+        }
+        
+        #myBtn,
+        #myBtn1,
+        .btnvolume {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+            float: right;
+        }
+        
+        #myBtn:hover,
+        #myBtn1:hover,
+        .btnvolume {
+            background: #ddd;
+            color: black;
+        }
+        
+        .dare {
+            font-size: 50px;
+        }
+        
+        .heading,
+        .prag {
+            display: flex;
+        }
+        
+        h2 {
+            padding-right: 15%;
+        }
+        
+        p {
+            padding-right: 12%;
+            font-size: large;
+        }
+        
+        .p2 {
+            padding-right: 26%;
+        }
+        
+        @media only screen and (max-width:738px) {
+            .heading,
+            .prag {
+                display: flex;
+                width: 49.9%;
+                flex-direction: column;
+                align-self: center;
+            }
+            .prag {
+                height: 100%;
+                padding-top: 0;
+            }
+            .father-flex {
+                display: flex;
+                flex-direction: row;
+            }
+            .p2 {
+                padding: 8% 0 10%;
+            }
+            .p1 {}
+        }
+        
+        @media only screen and (max-width:400px) {
+            .prag {
+                height: 245px;
+                padding-top: 3%;
+            }
+            p {
+                padding-bottom: 15%;
+            }
+            .p2 {
+                padding-bottom: 11%;
+            }
+        }
+        
+        @media only screen and (max-width:450px) {
+            html,
+            body {
+                margin: 0;
+                /* Because annoying default browser margins */
+            }
+            .video-container video {
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+                width: 100vh;
+                height: 100vw;
+                margin-top: -185vw;
+                margin-left: -105vw;
+                object-fit: cover;
+                z-index: 0;
+                visibility: visible;
+                z-index: -1;
+            }
+        }
+        
+        @media only screen and (max-width:376px) {
+            html,
+            body {
+                margin: 0;
+                /* Because annoying default browser margins */
+            }
+            .video-container video {
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+                width: 100vh;
+                height: 100vw;
+                margin-top: -228vw;
+                margin-left: -105vw;
+                object-fit: cover;
+                z-index: 0;
+                visibility: visible;
+                z-index: -1;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo" controls>
+  <source src="videos/Bugatti Chiron_ World Premiere(1080P_HD)_1_Trim.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+    </div>
+
+    <div class="content">
+        <h1>Bugatti Chiron</h1>
+        <h1 class="dare">
+            A UNIQUE MASTERPIECE
+        </h1>
+
+        <div class="father-flex">
+            <div class="heading">
+                <h2>POWER</h2>
+                <h2>MAX SPEED</h2>
+                <h2>0-100 km/h</h2>
+            </div>
+            <div class="prag">
+                <p>1500 HP / 1,103 kW</p>
+                <p class="p2">420 km/h</p>
+                <p>2.4 S</p>
+            </div>
+        </div>
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+        <button id="myBtn1" onclick="toggleMute()">Sound On</button>
+    </div>
+
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        var btn1 = document.getElementById("myBtn1");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+
+        function toggleMute() {
+            if (video.muted == false) {
+                video.muted = true;
+                btn1.innerHTML = "Sound On";
+            } else {
+                video.muted = false;
+                btn1.innerHTML = "Sound Off";
+            }
+            //video.toggleAttribute("muted");
+        }
+    </script>
+    <script src="header-footer.js"></script>
+
+</body>
+
+</html>

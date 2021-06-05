@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            background-image: url(img/cars.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+        }
+        
+        .form {
+            background-color: rgba(255, 77, 77, .6);
+            width: 50%;
+            justify-content: center;
+            padding: 10px 30px 15px 30px;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 5%;
+        }
+        
+        .label,
+        p {
+            /*font-size: large;*/
+            font-weight: bolder;
+        }
+        
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=tel] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: rgb(255, 179, 179);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: rgb(255, 128, 128);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form action="home.html" method="GET" id="form">
+        <div class="form">
+            <p id="error"></p>
+            <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" type="text" class="input" required>
+            </div>
+            <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input id="pass" type="password" class="input" data-type="password">
+            </div>
+            <div class="group">
+                <label for="pass" class="label">Repeat Password</label>
+                <input id="passre" type="password" class="input" data-type="password">
+            </div>
+            <div class="group">
+                <label for="pass" class="label">Email Address</label>
+                <input id="email" type="email" class="input" required>
+            </div>
+            <label for="phone" class="label">Phone number</label><br><br>
+            <input type="tel" id="phone" name="phone" placeholder="01 {{9numbers}}" pattern="[0]{1}[1]{1}[0-2]{1}[0-9]{8}" required>
+            <div class="group">
+                <p>Please select your gender</p>
+                <label for="male" class="label">Male</label>
+                <input id="male" type="radio" class="input" name="gender" value="male" required>
+                <label for="female" class="label">Female</label>
+                <input id="female" type="radio" class="input" name="gender" value="female">
+            </div>
+            <div class="group">
+                <input type="submit" class="button" value="Sign Up">
+            </div>
+
+        </div>
+    </form>
+</body>
+<script defer src="form.js"></script>
+
+</html>
