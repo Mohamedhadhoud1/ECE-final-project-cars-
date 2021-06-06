@@ -1,5 +1,5 @@
     (document.getElementById("body")).insertAdjacentHTML('afterbegin', ` <div class="ww">
-    <button class="btn active" style="display: block;">
+    <button class=" active icon-btn">
         <div class="icon"></div>
         <div class="icon"></div>
         <div class="icon"></div></button>
@@ -36,6 +36,9 @@
     .btn {
         float: left;
     }
+    .icon,.icon-btn{
+        display:none;
+    }
     
     .btn {
         display: inline-block;
@@ -63,14 +66,21 @@
         background-color: rgb(73, 70, 70);
     }
     
-    div.icon {
-        width: 35px;
-        height: 5.5px;
-        background-color: rgb(165, 161, 161);
-        margin: 6px 0;
-    }
+   
     
     @media only screen and (max-width: 768px) {
+        .icon-btn{
+            display: inline-block;
+            
+        float: left;
+        }
+        div.icon {
+            display:block;
+            width: 35px;
+            height: 5.5px;
+            background-color: rgb(165, 161, 161);
+            margin: 6px 0;
+        }
         .w {
             display: none;
         }
