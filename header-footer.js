@@ -28,6 +28,7 @@
         padding: 0;
         overflow: hidden;
         background-color: #333;
+        z-index: 100000;
         
     }
     
