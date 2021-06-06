@@ -1,0 +1,243 @@
+@charset "utf-8";
+body,
+td,
+th {
+    font-family: Trebuchet MS;
+    /* font-size: small;*/
+    background-color: #333;
+}
+
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-repeat: repeat-x;
+    padding: 0;
+    background-color: #333;
+}
+
+#container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #333;
+    padding: 0 0px;
+}
+
+#content {
+    float: right;
+    width: 60%;
+    /*  background-image: url(images/mainback.jpg);*/
+    background-image: linear-gradient( rgb(0, 0, 0), rgb(255, 102, 102));
+    background-repeat: repeat-x;
+}
+
+.img {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.content1 {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 0px;
+    height: ;
+}
+
+#myVideo {
+    position: -ms-page right: 0;
+    bottom: 0;
+    top: 48px;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.btn-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+#myBtn,
+#myBtn1,
+.btnvolume {
+    width: 1000px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover,
+#myBtn1:hover,
+.btnvolume {
+    background: #ddd;
+    color: black;
+}
+
+.content1wrap {
+    position: relative;
+    bottom: 0;
+    background-image: url("images/laferrari-side.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 0px;
+}
+
+p {
+    font-size: large;
+    padding: 10px;
+}
+
+#sidebar {
+    padding: 0;
+    float: left;
+    width: 40%;
+    /*background-image: url(images/mainback.jpg);*/
+    background-image: linear-gradient( rgb(0, 0, 0), rgb(255, 102, 102));
+    background-repeat: repeat-x;
+}
+
+#bottom {
+    padding: 0px;
+    background-color: #FFFFFF;
+    /*  background-image: url(images/mainback.jpg);*/
+    background-image: linear-gradient( rgb(0, 0, 0), rgb(255, 102, 102));
+    background-repeat: repeat-x;
+    height: 200px;
+    overflow: auto;
+    margin-bottom: 0px;
+    border: solid rgb(93, 93, 93) 3px;
+}
+
+.clear {
+    clear: both;
+    background-color: #FFFFFF;
+    padding-bottom: 0;
+}
+
+#top {
+    padding: 10px;
+    height: 20px;
+    background-image: url(images/topback.jpg);
+    font-size: x-small;
+}
+
+#header {
+    height: 100%;
+    /*  background-image: url(images/top.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0;
+}
+
+.header2 {
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#content img {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(217, 217, 217);
+}
+
+#flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.dare {
+    font-size: 65px;
+}
+
+.heading,
+.prag {
+    display: flex;
+}
+
+h2 {
+    padding: 3%;
+}
+
+p {
+    padding: 5%;
+    font-size: large;
+    color: white;
+}
+
+.p2 {
+    padding-right: 18%;
+}
+
+@media only screen and (max-width:738px) {
+    .heading,
+    .prag {
+        display: flex;
+        width: 49.9%;
+        flex-direction: column;
+        align-self: center;
+    }
+    .prag {
+        height: 100%;
+        padding-top: 0;
+    }
+    .father-flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .p2 {
+        padding: 0% 0 0%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .prag {
+        height: 245px;
+        padding-top: 3%;
+    }
+    p {
+        padding-bottom: 15%;
+    }
+    .p2 {
+        padding-bottom: 8%;
+    }
+    .pic1 {
+        width: 100%;
+    }
+    p {
+        padding-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #sidebar {
+        width: 100%;
+        float: none;
+    }
+    #content {
+        width: 100%;
+        float: none;
+    }
+    #flex {
+        display: flex;
+        flex-direction: column;
+    }
+}

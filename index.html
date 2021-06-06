@@ -29,6 +29,13 @@
             font-weight: bolder;
         }
         
+        .child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
         input[type=text],
         input[type=password],
         input[type=email],
@@ -42,7 +49,8 @@
             box-sizing: border-box;
         }
         
-        input[type=submit] {
+        input[type=submit],
+        a {
             width: 100%;
             background-color: rgb(255, 179, 179);
             color: white;
@@ -51,6 +59,8 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            color: black;
+            font-weight: 700;
         }
         
         input[type=submit]:hover {
@@ -94,9 +104,81 @@
                 <input type="submit" class="button" value="Sign Up">
             </div>
 
+
+
+
         </div>
     </form>
+    <div style="text-align: center; width: 100%; position: relative; margin-top: 40px; " id="signin">
+        <div class="child">
+            <p style="font-size: larger; background-color: rgba(255, 77, 77, .6); padding: 10px; ">Already a member?</p>
+            <a style="color: black; font-weight: 700; " onclick="signin() ">Sign in</a>
+        </div>
+    </div>
+    <script>
+        function signin() {
+            document.getElementById('form').innerHTML = `<div class='form'>
+                    
+            <p id="error "></p>
+            <div class='group'>
+                <label for="user " class='label'>Username</label>
+                <input id='user' type='text' class="input " required>
+            </div>
+            <div class="group " style="padding-bottom: 10px; ">
+                <label for="pass " class="label ">Password</label>
+                <input id='pass' type='password' class="input " data-type="password " required>
+            </div>
+
+            <div class="group ">
+                <input type="submit" class="button" onclick="submitData()" value='Log in'>
+            </div>
+        
+                </div>`;
+            document.getElementById('signin').innerHTML = ` <div class="child"> <p style="font-size: larger; background-color: rgba(255, 77, 77, .6); padding: 10px;">Don't have an Account</p>
+        <a style="color: black; font-weight: 700; " onClick="window.location.reload();">Sign Up</a></div>`;
+
+        }
+
+        function submitData() {
+            document.getElementById("form").submit();
+        }
+    </script>
 </body>
-<script defer src="form.js"></script>
+<script defer src="form.js "></script>
 
 </html>
+
+<!--
+     <div class="form ">
+            <p id="error "></p>
+            <div class="group ">
+                <label for="user " class="label ">Username</label>
+                <input id="user " type="text " class="input " required>
+            </div>
+            <div class="group ">
+                <label for="pass " class="label ">Password</label>
+                <input id="pass " type="password " class="input " data-type="password ">
+            </div>
+            <div class="group ">
+                <label for="pass " class="label ">Repeat Password</label>
+                <input id="passre " type="password " class="input " data-type="password ">
+            </div>
+            <div class="group ">
+                <label for="pass " class="label ">Email Address</label>
+                <input id="email " type="email " class="input " required>
+            </div>
+            <label for="phone " class="label ">Phone number</label><br><br>
+            <input type="tel " id="phone " name="phone " placeholder="01 {{9numbers}} " pattern="[0]{1}[1]{1}[0-2]{1}[0-9]{8} " required>
+            <div class="group ">
+                <p>Please select your gender</p>
+                <label for="male " class="label ">Male</label>
+                <input id="male " type="radio " class="input " name="gender " value="male " required>
+                <label for="female " class="label ">Female</label>
+                <input id="female " type="radio " class="input " name="gender " value="female ">
+            </div>
+            <div class="group ">
+                <input style="color: black; font-weight: 700; " type="submit " class="button " value="Sign Up ">
+            </div>
+
+        </div>
+-->

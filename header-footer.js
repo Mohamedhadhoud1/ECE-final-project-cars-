@@ -6,14 +6,17 @@
 
     <ul>
         <div class="w">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-            <li></li>
+            <li><a href="2.html">Lamborghini</a></li>
+            <li><a href="3.html">Bugatti</a></li>
+            <li><a href="4.html">Audi</a></li>
+            <li><a href="5.html">Ferrari</a></li>
+            <li><a href="index.html">Log out</a></li>
+            <li><a href="https://mohamedhadhoud1.github.io/portflio/">contact</li>
+            
             <a href="2.html"><img style="width:48px;height:48px; float:right;" src="img/android-chrome-192x192.jpg"></a>
             <a href="3.html"><img style="width:48px;height:48px; float:right;" src="img/bugattilogo.jpg"></a>
             <a href="4.html"><img style="width:48px;height:48px; float:right;" src="img/audilogo3.jpg"></a>
+            <a href="5.html"><img style="width:48px;height:48px; float:right;" src="img/ferarrilogo2.jpg"></a>
         </div>
     </ul>
 
