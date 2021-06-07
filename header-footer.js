@@ -6,11 +6,11 @@
 
     <ul>
         <div class="w">
-            <li><a href="2.html">Lamborghini</a></li>
-            <li><a href="3.html">Bugatti</a></li>
-            <li><a href="4.html">Audi</a></li>
-            <li><a href="5.html">Ferrari</a></li>
-            <li><a href="index.html">Log out</a></li>
+            <li ><a id="lambo" href="2.html" >Lamborghini</a></li>
+            <li><a  id="buga" href="3.html">Bugatti</a></li>
+            <li><a  id="audi" href="4.html">Audi</a></li>
+            <li><a id="ferr" href="5.html">Ferrari</a></li>
+            <li><a  href="index.html">Log out</a></li>
             <li><a href="https://mohamedhadhoud1.github.io/portflio/">contact</li>
             
             <a href="2.html"><img style="width:48px;height:48px; float:right;" src="img/android-chrome-192x192.jpg"></a>
@@ -63,7 +63,7 @@
     }
     
     .active {
-        background-color: rgb(73, 70, 70);
+        background-color:#111;
     }
     
    

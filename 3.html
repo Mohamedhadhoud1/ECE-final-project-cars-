@@ -171,7 +171,7 @@
     </style>
 </head>
 
-<body id="body">
+<body id="body" onload="active()">
     <div class="video-container">
         <video autoplay muted loop id="myVideo" controls>
   <source src="videos/Bugatti Chiron_ World Premiere(1080P_HD)_1_Trim.mp4" type="video/mp4">
@@ -226,6 +226,10 @@
                 btn1.innerHTML = "Sound Off";
             }
             //video.toggleAttribute("muted");
+        }
+
+        function active() {
+            document.getElementById('buga').classList.add('active');
         }
     </script>
     <script src="header-footer.js"></script>
