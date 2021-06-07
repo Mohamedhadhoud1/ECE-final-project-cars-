@@ -23,6 +23,8 @@
             top: 48px;
             min-width: 100%;
             min-height: 100%;
+            padding-left: 10%;
+            height: ;
         }
         
         .content {
@@ -128,7 +130,7 @@
                 transform-origin: bottom left;
                 width: 100vh;
                 height: 100vw;
-                margin-top: -185vw;
+                margin-top: -713px;
                 margin-left: -105vw;
                 object-fit: cover;
                 z-index: 0;
@@ -136,8 +138,28 @@
                 z-index: -1;
             }
         }
+        /* @media (max-width:376px) and (max-height: 600px) {
+            html,
+            body {
+                margin: 0;
+                /* Because annoying default browser margins 
+            }
+            .video-container video {
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+                width: 100vh;
+                height: 100vw;
+                margin-top: -140px;
+                margin-right: -280px;
+                object-fit: cover;
+                z-index: 0;
+                visibility: visible;
+                z-index: -1;
+            }
+        }*/
         
-        @media only screen and (max-width:376px) {
+        @media screen and (min-height: 800px) {
             html,
             body {
                 margin: 0;
@@ -149,12 +171,42 @@
                 transform-origin: bottom left;
                 width: 100vh;
                 height: 100vw;
-                margin-top: -228vw;
-                margin-left: 100px;
+                margin-top: -850px;
+                margin-right: -280px;
                 object-fit: cover;
                 z-index: 0;
                 visibility: visible;
                 z-index: -1;
+            }
+        }
+        
+        @media screen and (max-height: 650px) {
+            html,
+            body {
+                margin: 0;
+                /* Because annoying default browser margins */
+            }
+            .video-container video {
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: bottom left;
+                width: 100vh;
+                height: 100vw;
+                margin-top: -650px;
+                margin-right: -200px;
+                object-fit: cover;
+                z-index: 0;
+                visibility: visible;
+                z-index: -1;
+            }
+        }
+        
+        @media only screen and (max-width:285px) {
+            .dare {
+                font-size: 35px;
+            }
+            h1 {
+                font-size: 25px;
             }
         }
     </style>
@@ -162,7 +214,7 @@
 
 <body id="body" onload="active()">
     <div class=" video-container ">
-        <video autoplay muted loop id="myVideo ">
+        <video autoplay muted loop id='myVideo'>
   <source src="videos/360_ESTERNI_AVENTADOR_S_ICELANDIC1_1.mp4 " type="video/mp4 ">
   Your browser does not support HTML5 video.
 </video></div>
@@ -192,8 +244,8 @@
 
     <script src="header-footer.js "></script>
     <script>
-        var video = document.getElementById("myVideo ");
-        var btn = document.getElementById("myBtn ");
+        var video = document.getElementById('myVideo');
+        var btn = document.getElementById('myBtn');
 
         function myFunction() {
             if (video.paused) {
