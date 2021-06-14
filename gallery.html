@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="style">
+        body {
+            background-image: linear-gradient( rgb(64, 64, 64), rgb(242, 242, 242));
+        }
+        
+        .gall {
+            background-color: rgb(128, 128, 128);
+        }
+        
+        div.gallery {
+            border: 1px solid #ccc;
+            background-color: rgb(153, 153, 153);
+        }
+        
+        div.gallery:hover {
+            border: 2px solid yellow;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        p {
+            ba
+        }
+        
+        .tuk {
+            margin: 30px 50px;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        
+        th,
+        td {
+            text-align: left;
+            padding: 16px;
+        }
+        
+        tr:nth-child(even) {
+            background-image: linear-gradient(to right, rgb(142, 142, 142), rgb(80, 80, 80));
+        }
+        
+        tr:nth-child(odd) {
+            background-image: linear-gradient(to right, rgb(132, 123, 123), rgb(83, 72, 72));
+        }
+        /*  @media only screen and (max-width: 500px) {
+            table1();
+        }*/
+        
+        #t1 th,
+        #t1 td {
+            text-align: center;
+            font-size: larger;
+        }
+        
+        #r1 {
+            border: solid 2px rgb(30, 21, 21);
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="gall">
+        <h2 style="padding-top: 30px;;">Other Awesome Cars</h2>
+        <h4>click to open photo in bigger size</h4>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img/bmw.jpg">
+                    <img src="img/bmw.jpg" alt="BMW" width="600" height="400">
+                </a>
+                <div class="desc">BMW M850i xDrive</div>
+            </div>
+        </div>
+
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img/bumblebee.jpg">
+                    <img src="img/bumblebee.jpg" alt="bumblebee" width="600" height="400">
+                </a>
+                <div class="desc">2014 Chevrolet Camaro SS<br>"Bumblebee"</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img/mercedes.jpg">
+                    <img src="img/mercedes.jpg" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Mercedes-AMG GT 63 S</div>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="img/1393454469000-Venom-GT-2704-mph-KSC-9.jpg">
+                    <img src="img/1393454469000-Venom-GT-2704-mph-KSC-9.jpg" alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">Hennessey Venom GT<br>"Fastest Car In The World"</div>
+            </div>
+        </div>
+        <div class="responsive tuk">
+            <div class="gallery">
+                <a target="_blank" href="img/download (1).jpg">
+                    <img src="img/download.jpg" alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">TukTuk<br>"The Ultimate Car According to TOP GEAR"</div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div style="padding:6px;">
+        <p>A bit lighter and more dynamic than the Barcelona Grey Liquid finish worn by the Concept 8 Series which was first shown just over a year ago, the softer tone on display here looks like it could be the rumored Barcelona Blue color. In comparison
+        </p>
+        <p> with the concept, things seem to have been appropriately filed down for a production model, much as we discussed last month when the new model was teased in the shadows of the M8 GTE racer.</p>
+    </div>
+
+
+    <h2>Informations About The Cars</h2>
+    <p>the new Eight appears hunkered down and built for speed</p>
+    <div id="tables">
+
+    </div>
+    <script>
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                (document.getElementById("tables")).innerHTML = `<table id="t1">
+                  <tbody id="r1">
+                      <tr>
+                          <th>BMW M850i xDrive</th>
+
+                      </tr>
+                      <tr>
+                          <td>Max Speed : 310 km/h</td>
+
+                      </tr>
+                      <tr>
+                          <td>Power : 523 Hp</td>
+
+                      </tr>
+                      <tr>
+                          <td>0-60 mile/h : 3.6 S</td>
+
+                      </tr>
+                  </tbody>
+                  <tbody id="r1">
+                      <tr>
+                          <th>Chevrolet Camaro SS</th>
+
+                      </tr>
+                      <tr>
+                          <td>455 Hp</td>
+
+                      </tr>
+                      <tr>
+                          <td>290 Km/h</td>
+
+                      </tr>
+                      <tr>
+                          <td>4 S</td>
+
+                      </tr>
+                  </tbody>
+                  <tbody id="r1">
+                      <tr>
+                          <th>Mercedes-AMG GT 63 S</th>
+
+                      </tr>
+                      <tr>
+                          <td>315 km/h</td>
+
+                      </tr>
+                      <tr>
+                          <td>577 hp</td>
+
+                      </tr>
+                      <tr>
+                          <td>3.3 S</td>
+
+                      </tr>
+                  </tbody>
+                  <tbody id="r1">
+                      <tr>
+                          <th>Hennessey Venom GT</th>
+
+                      </tr>
+                      <tr>
+                          <td>435.31 km/h</td>
+
+                      </tr>
+                      <tr>
+                          <td>1817 horsepower</td>
+
+                      </tr>
+                      <tr>
+                          <td>2.4 seconds</td>
+
+                      </tr>
+                  </tbody>
+                  <tbody id="r1">
+                      <tr>
+                          <th>TukTuk</th>
+
+                      </tr>
+                      <tr>
+                          <td>Max speed : 60Km Per Hours</td>
+
+                      </tr>
+                      <tr>
+                          <td>Power : 10 Hp</td>
+
+                      </tr>
+                      <tr>
+                          <td>0-60 : Forever??</td>
+
+                      </tr>
+                  </tbody>
+              </table>`;
+            } else {
+                (document.getElementById("tables")).innerHTML = ` <table id="table1">
+            <tr>
+                <th></th>
+                <th>BMW M850i xDrive</th>
+                <th>Chevrolet Camaro SS</th>
+                <th>Mercedes-AMG GT 63 S</th>
+                <th>Hennessey Venom GT</th>
+                <th>TukTuk</th>
+            </tr>
+            <tr>
+                <th>Max Speed</th>
+                <td>310 km/h</td>
+                <td>290 Km/h</td>
+                <td>315 km/h</td>
+                <td>435.31 Km/h</td>
+                <td>60km Km/h</td>
+            </tr>
+            <tr>
+                <th>Power</th>
+                <td>523 Hp</td>
+                <td>455 Hp</td>
+                <td>577 hp</td>
+                <td>1817 Hp</td>
+                <td>10 Hp</td>
+            </tr>
+            <tr>
+                <th>0-60 Mph</th>
+                <td>3.6 S</td>
+                <td>4 S</td>
+                <td>3.3 S</td>
+                <td>2.4 S</td>
+                <td>ForEver??</td>
+            </tr>
+        </table>`;
+
+
+                //document.body.style.backgroundColor = "pink";
+            }
+        }
+        var x = window.matchMedia("(max-width: 500px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+    </script>
+    <script src="header-footer.js"></script>
+</body>
+
+</html>
