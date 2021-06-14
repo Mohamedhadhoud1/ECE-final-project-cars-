@@ -11,7 +11,7 @@
             <li><a  id="buga" href="3.html">Bugatti</a></li>
             <li><a  id="audi" href="4.html">Audi</a></li>
             <li><a id="ferr" href="5.html">Ferrari</a></li>
-            <li><a  href="gallery.html">Other Cars</a></li>
+            <li><a id="other" href="gallery.html">Other Cars</a></li>
             <li><a  href="index.html">Log out</a></li>
             <li><a href="https://mohamedhadhoud1.github.io/portflio/">contact</li>
             
